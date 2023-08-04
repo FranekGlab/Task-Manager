@@ -1,0 +1,32 @@
+<div cdkDropListGroup class="container">
+  <div *ngIf="tasks | taskFilter: 'todo': listId as tasks" class="category">
+    <h2>TO DO <span *ngIf="tasks.length > 0"> - {{tasks.length}}</span></h2>
+    <div cdkDropList cdkDropListSortingDisabled cdkDropListData="todo" (cdkDropListDropped)="drop($event)"
+      class="tasks">
+      <div *ngFor="let task of tasks" cdkDrag [cdkDragData]="task" class="task" (click)="redirectToDetails(task)">{{task.name}}
+        <button mat-icon-button color="warn" (click)="$event.stopPropagation(); deleteTask(task)"><mat-icon>delete</mat-icon></button>
+        <button mat-icon-button color="primary" (click)="$event.stopPropagation(); onEdit(task)"><mat-icon>edit</mat-icon></button>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="tasks | taskFilter: 'doing': listId as tasks" class="category">
+    <h2>DOING <span *ngIf="tasks.length > 0"> - {{tasks.length}}</span></h2>
+    <div cdkDropList cdkDropListSortingDisabled cdkDropListData="doing" (cdkDropListDropped)="drop($event)"
+      class="tasks">
+      <div *ngFor="let task of tasks" cdkDrag [cdkDragData]="task" class="task" (click)="redirectToDetails(task)">{{task.name}}
+        <button mat-icon-button color="warn" (click)="$event.stopPropagation(); deleteTask(task)"><mat-icon>delete</mat-icon></button>
+        <button mat-icon-button color="primary" (click)="$event.stopPropagation(); onEdit(task)"><mat-icon>edit</mat-icon></button>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="tasks | taskFilter: 'done': listId as tasks" class="category">
+    <h2>DONE <span *ngIf="tasks.length > 0"> - {{tasks.length}}</span></h2>
+    <div cdkDropList cdkDropListSortingDisabled cdkDropListData="done" (cdkDropListDropped)="drop($event)"
+      class="tasks">
+      <div *ngFor="let task of tasks" cdkDrag [cdkDragData]="task" class="task" (click)="redirectToDetails(task)">{{task.name}}
+        <button mat-icon-button color="warn" (click)="$event.stopPropagation(); deleteTask(task)"><mat-icon>delete</mat-icon></button>
+        <button mat-icon-button color="primary" (click)="$event.stopPropagation(); onEdit(task)"><mat-icon>edit</mat-icon></button>
+      </div>
+    </div>
+  </div>
+</div>

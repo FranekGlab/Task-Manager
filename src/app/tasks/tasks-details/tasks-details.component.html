@@ -1,0 +1,8 @@
+<div class="details" *ngIf="task && list">
+  <p class="mat-title">Task name: {{ task.name }}</p>
+  <p class="mat-title">Task state: {{ task.state}} </p>
+  <p class="mat-title">List name: {{ list.name}} </p>
+</div>
+<div *ngIf="!task || !list">
+  <h2 class="mat-title">Takie zadanie nie istnieje</h2>
+</div>

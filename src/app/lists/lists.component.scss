@@ -1,0 +1,26 @@
+:host {
+  display: block;
+  background-color: rgb(237, 237, 237);
+  padding: 24px;
+}
+
+.list {
+  display: flex;
+  padding: 16px;
+  background-color: rgb(255, 255, 255);
+  color: #000000;
+  border: 1px solid rgb(141, 141, 141);
+  margin-bottom: 16px;
+  justify-content: space-between;
+  align-items: center;
+
+  p {
+    margin: 0;
+  }
+}
+
+.list-picked {
+  background-color: rgb(142, 182, 253);
+  border: 1px solid #041635;
+  color: #000;
+}

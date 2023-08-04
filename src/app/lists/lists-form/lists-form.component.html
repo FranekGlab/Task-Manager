@@ -1,0 +1,9 @@
+<form [formGroup]="listForm">
+  <mat-form-field appearance="outline">
+    <mat-label>List Name</mat-label>
+    <input formControlName="name" matInput>
+  </mat-form-field>
+
+  <button (click)="saveList()" mat-raised-button [disabled]="listForm.invalid" color="primary">{{
+    oldList ? "Update" : "Add"}}</button>
+</form>

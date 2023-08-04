@@ -1,0 +1,7 @@
+<div class="tasks-panel">
+  <app-tasks-list #list [listId]="listId" (edit)="form.setEditMode($event)"></app-tasks-list>
+  <mat-card>
+    <app-tasks-form [listId]="listId" #form (save)="list.saveTask($event)"></app-tasks-form>
+  </mat-card>
+  <app-tasks-user></app-tasks-user>
+</div>

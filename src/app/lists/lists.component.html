@@ -1,0 +1,14 @@
+<div class="lists">
+  <div class="list" *ngFor="let list of lists" (click)="pickList(list)" [ngClass]="{ 'list-picked': list.id === listId}" >
+    <p>{{ list.name }}</p>
+
+    <div>
+      <button mat-icon-button color="warn" (click)="deleteList(list)"><mat-icon>delete</mat-icon></button>
+      <button mat-icon-button color="primary" (click)="form.setEditMode(list)"><mat-icon>edit</mat-icon></button>
+    </div>
+  </div>
+</div>
+
+<mat-card>
+  <app-lists-form #form (save)="saveList($event)"></app-lists-form>
+</mat-card>

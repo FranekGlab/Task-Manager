@@ -1,0 +1,32 @@
+:host {
+  padding: 24px;
+  display: block;
+  flex-grow: 1;
+}
+
+.tasks,
+.container {
+  height: 100%;
+}
+
+.container {
+  width: 100%;
+}
+
+.category {
+  width: 100%;
+}
+
+.task {
+  padding: 10px;
+  background-color: #dbdbdb;
+  border: 1px solid #969696;
+  margin-bottom: 10px;
+}
+
+@media (min-width: 900px) {
+  .container {
+    display: flex;
+    gap: 20px;
+  }
+}

@@ -1,0 +1,4 @@
+<div class="user-panel">
+  <app-lists (pick)="tasks.setListId($event)" (deleted)="tasks.deleteTasksByListId($event)" ></app-lists>
+  <app-tasks #tasks></app-tasks>
+</div>
