@@ -1,4 +1,5 @@
 # Task-Manager
+Project for studies
 
 ANGULAR 13.0.0
 
